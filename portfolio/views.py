@@ -58,7 +58,7 @@ def contact(request):
         email = request.POST.get('email', '').strip()
         message = request.POST.get('message', '').strip()
         
-        # Validation
+        
         errors = []
         
         if not name:
@@ -80,10 +80,10 @@ def contact(request):
             for error in errors:
                 messages.error(request, error)
         else:
-            # Success - store or process the message
+         
             messages.success(request, 'Thank you for your message! I will get back to you soon.')
             
-            # For CSE310 demonstration - print to console
+            
             print(f"=== CSE310 PORTFOLIO CONTACT FORM ===")
             print(f"Name: {name}")
             print(f"Email: {email}")
