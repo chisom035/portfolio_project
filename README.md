@@ -1,4 +1,4 @@
-# Portfolio Website - CSE310 Project
+# Portfolio Website
 
 This is a dynamic, full-stack portfolio website built with Django for my CSE310 Applied Programming course. This portfolio showcases some of my projects, skills, and contact information with responsive design and interactive features. It demonstrates proficiency in Django, Python, HTML, CSS, and JavaScript.
 
