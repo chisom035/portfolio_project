@@ -8,6 +8,7 @@
 }
 
 :root {
+    /* Color Palette */
     --primary-color: #2c5282;    
     --secondary-color: #d69e2e;  
     --accent1-color: #c53030;    
@@ -16,11 +17,11 @@
     --text-color: #2d3748;       
     --text-light: #718096;       
     
-
+    /* Fonts */
     --heading-font: 'IM Fell French Canon SC', serif;
     --paragraph-font: 'Lato', sans-serif;
     
-
+    /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
@@ -42,7 +43,7 @@ body {
     padding: 0 var(--spacing-sm);
 }
 
-
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -88,7 +89,7 @@ p {
     line-height: 1.8;
 }
 
-
+/* Header & Navigation */
 header {
     background-color: var(--accent2-color);
     box-shadow: 0 2px 20px rgba(0,0,0,0.1);
@@ -199,7 +200,7 @@ header .container {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
+/* Course Badge */
 .course-badge {
     display: inline-block;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -225,7 +226,7 @@ header .container {
     100% { box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); }
 }
 
-
+/* CSE310 Course Section */
 .course-section {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
@@ -280,7 +281,7 @@ header .container {
     font-size: 1.2rem;
 }
 
-
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 14px 35px;
@@ -321,7 +322,7 @@ header .container {
     box-shadow: 0 8px 25px rgba(44, 82, 130, 0.3);
 }
 
-
+/* Hero Section */
 .hero {
     padding: var(--spacing-xl) 0;
     background: linear-gradient(135deg, var(--primary-color) 0%, #1a365d 100%);
@@ -404,7 +405,7 @@ header .container {
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
-
+/* Skills Section */
 .skills {
     padding: var(--spacing-xl) 0;
     background: var(--accent2-color);
@@ -486,7 +487,7 @@ header .container {
     font-weight: 500;
 }
 
-
+/* Projects Section */
 .projects {
     padding: var(--spacing-xl) 0;
     background: var(--background-color);
@@ -580,7 +581,7 @@ header .container {
     margin-top: var(--spacing-xl);
 }
 
-
+/* About Section */
 .about {
     padding: var(--spacing-xl) 0;
     background: var(--accent2-color);
@@ -621,7 +622,7 @@ header .container {
     margin-bottom: 5px;
 }
 
-
+/* Contact Section */
 .contact {
     padding: var(--spacing-xl) 0;
     background: var(--background-color);
@@ -689,7 +690,7 @@ header .container {
     box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
 }
 
-
+/* Messages */
 .messages {
     margin: var(--spacing-md) 0;
 }
@@ -720,7 +721,7 @@ header .container {
     border: 2px solid #fecaca;
 }
 
-
+/* Projects Page */
 .projects-page {
     padding: var(--spacing-xl) 0;
     margin-top: 120px;
@@ -779,7 +780,7 @@ header .container {
     margin-top: var(--spacing-xl);
 }
 
-
+/* Footer */
 footer {
     background: linear-gradient(135deg, var(--primary-color), #1a365d);
     color: var(--accent2-color);
@@ -843,7 +844,7 @@ footer {
     opacity: 0.9;
 }
 
-
+/* Responsive Design */
 @media (max-width: 1024px) {
     h1 { font-size: 3rem; }
     h2 { font-size: 2.2rem; }

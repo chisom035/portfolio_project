@@ -6,7 +6,7 @@ from django.conf import settings
 def home(request):
     """Render the home page with portfolio content."""
     
-    
+    # Skill categories data
     skill_categories = [
         {
             'name': 'Frontend',
@@ -22,6 +22,7 @@ def home(request):
         }
     ]
     
+    # Course information data
     course_info = {
         'name': 'CSE310 - Web Application Development',
         'description': 'This portfolio is developed as part of CSE310 course requirements, showcasing full-stack development with Django.',
@@ -58,7 +59,7 @@ def contact(request):
         email = request.POST.get('email', '').strip()
         message = request.POST.get('message', '').strip()
         
-        
+        # Validation
         errors = []
         
         if not name:
@@ -80,10 +81,10 @@ def contact(request):
             for error in errors:
                 messages.error(request, error)
         else:
-         
+            # Success - store or process the message
             messages.success(request, 'Thank you for your message! I will get back to you soon.')
             
-            
+            # For demonstration - print to console
             print(f"=== CSE310 PORTFOLIO CONTACT FORM ===")
             print(f"Name: {name}")
             print(f"Email: {email}")
@@ -91,7 +92,7 @@ def contact(request):
             print(f"Timestamp: {request.POST.get('timestamp', 'N/A')}")
             print("=" * 40)
             
-        
+            
         return redirect('home')
     
     return redirect('home')

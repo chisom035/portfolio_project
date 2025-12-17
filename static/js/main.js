@@ -1,6 +1,6 @@
 // ========== PORTFOLIO MAIN.JS ==========
 
-
+// DOM Elements
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const contactForm = document.getElementById('contactForm');
@@ -8,7 +8,7 @@ const statNumbers = document.querySelectorAll('.stat-number');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
-
+// Header scroll effect
 function initHeaderScroll() {
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
@@ -20,7 +20,7 @@ function initHeaderScroll() {
     });
 }
 
-
+// Mobile Navigation
 function initMobileNav() {
     if (hamburger) {
         hamburger.addEventListener('click', () => {
@@ -28,7 +28,7 @@ function initMobileNav() {
             navLinks.classList.toggle('active');
         });
 
-       
+        // Close mobile menu when clicking on links
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -38,11 +38,11 @@ function initMobileNav() {
     }
 }
 
-
+// Smooth Scrolling
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            
+            // Only intercept internal anchor links
             if (this.getAttribute('href').startsWith('#') && 
                 document.querySelector(this.getAttribute('href'))) {
                 e.preventDefault();
@@ -58,14 +58,15 @@ function initSmoothScroll() {
     });
 }
 
+// Project Filtering
 function initProjectFilter() {
     if (filterButtons.length === 0) return;
     
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-         
+            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-           
+            // Add active class to clicked button
             button.classList.add('active');
             
             const filter = button.getAttribute('data-filter');
@@ -84,7 +85,7 @@ function filterProjects(filter) {
     });
 }
 
-
+// Animate Statistics
 function animateStats() {
     if (statNumbers.length === 0) return;
     
@@ -117,7 +118,7 @@ function animateStats() {
     }
 }
 
-
+// Form Validation
 function initFormValidation() {
     if (!contactForm) return;
     
@@ -126,7 +127,7 @@ function initFormValidation() {
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
         
-     
+        // Simple validation
         if (!name || !email || !message) {
             e.preventDefault();
             showFormMessage('Please fill in all fields', 'error');
@@ -139,7 +140,7 @@ function initFormValidation() {
             return false;
         }
         
-        
+        // If validation passes, Django form will submit
         return true;
     });
 }
@@ -150,25 +151,25 @@ function isValidEmail(email) {
 }
 
 function showFormMessage(text, type) {
-    
+    // Remove existing messages
     const existingMessages = document.querySelectorAll('.form-message');
     existingMessages.forEach(msg => msg.remove());
     
-    
+    // Create new message
     const messageDiv = document.createElement('div');
     messageDiv.className = `form-message message ${type}`;
     messageDiv.textContent = text;
     
-   
+    // Insert before form
     contactForm.parentNode.insertBefore(messageDiv, contactForm);
     
-    
+    // Auto-remove after 5 seconds
     setTimeout(() => {
         messageDiv.remove();
     }, 5000);
 }
 
-
+// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initHeaderScroll();
     initMobileNav();
@@ -177,14 +178,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectFilter();
     animateStats();
     
-    
+    // Add loading animation
     document.body.style.opacity = '0';
     setTimeout(() => {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
     }, 100);
     
- 
+    // Handle window resize
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             navLinks.classList.remove('active');
@@ -194,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    
+    // Log for debugging
     console.log('🎓 CSE310 Portfolio initialized successfully!');
     console.log('🚀 Django server running at http://127.0.0.1:8000/');
 });
