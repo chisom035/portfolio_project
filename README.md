@@ -1,11 +1,10 @@
-# Django Portfolio Website - CSE310 Project
+# Portfolio Website - CSE310 Applied Programming Project
 
 ## Overview
 This project shows a dynamic, full-stack portfolio website built with Django for my CSE310: Web Application Development. This portfolio showcases my software engineering projects, skills, and contact information with responsive design and interactive features.
 
 ## Live Demo
 - **YouTube URL:** [Your live deployment URL here]
-- **Local Development:** http://127.0.0.1:8000 (when running locally)
 
 ## Features
 - ✅ **Dynamic Content Rendering** - Django templates with data from views
@@ -18,7 +17,7 @@ This project shows a dynamic, full-stack portfolio website built with Django for
 - ✅ **Form Handling** - CSRF protection and input validation
 
 ## Technologies Used
-- **Backend:** Django 6.0, Python 3.11+
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Database:** SQLite (development)
+- **Backend:** Django, Python
+- **Frontend:** HTML, CSS, JavaScript
+- **Database:** SQLite
 - **Version Control:** Git, GitHub
