@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Chisom Wonodi - Portfolio{% endblock %}</title>
+    
+    {% load static %}
+    
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-circle">CW</div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-circle">CW</div>
+                </div>
+                <div class="footer-links">
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'projects' %}">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/chisom035" target="_blank" aria-label="GitHub">GitHub</a>
+                    <a href="https://www.linkedin.com/in/chisom-wonodi/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {% now "Y" %} Chisom Wonodi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

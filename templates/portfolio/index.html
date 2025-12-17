@@ -1,0 +1,276 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Chisom Wonodi - Portfolio{% endblock %}
+
+{% block content %}
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Chisom Wonodi</h1>
+                <h2>Software Engineer</h2>
+                <p>Creating innovative solutions through code and design</p>
+                
+                
+                <div class="course-badge">
+                    🎓 Current Project: CSE310 - Web Application Development
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-placeholder">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <div class="container">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-items">
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Responsive Design</span>
+                    <span class="skill-item">DOM Manipulation</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">Django</span>
+                    <span class="skill-item">SQLite</span>
+                    <span class="skill-item">REST APIs</span>
+                    <span class="skill-item">Database Design</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Methods</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Git/GitHub</span>
+                    <span class="skill-item">VS Code</span>
+                    <span class="skill-item">UI/UX Design</span>
+                    <span class="skill-item">Search Algorithms</span>
+                </div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number" data-target="5">0</span>
+                <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="15">0</span>
+                <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="4">0</span>
+                <span class="stat-label">Active Projects</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="course-section">
+    <div class="container">
+        <h3>Current Academic Project: CSE310</h3>
+        <p>This portfolio website is being developed as part of my <strong>CSE310: Applied Programming</strong> Course. 
+           The project demonstrates full-stack development skills using Django framework, Python backend, and modern frontend technologies.</p>
+        
+        <div class="course-details">
+            <div class="course-detail-item">
+                <strong>Course:</strong> CSE310 - Applied Programming
+            </div>
+            <div class="course-detail-item">
+                <strong>Focus:</strong> Full-Stack Development with Django
+            </div>
+            <div class="course-detail-item">
+                <strong>Technologies:</strong> Python, Django, HTML5, CSS3, JavaScript
+            </div>
+            <div class="course-detail-item">
+                <strong>Project Type:</strong> Dynamic Portfolio Website
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <h4>Key Features Implemented:</h4>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>✅ Dynamic content rendering with Django templates</li>
+                <li>✅ Database integration for projects and skills</li>
+                <li>✅ User input validation and contact form</li>
+                <li>✅ Responsive design for all devices</li>
+                <li>✅ Static file management with Django</li>
+                <li>✅ Form handling with CSRF protection</li>
+                <li>✅ URL routing and navigation</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1: Django Portfolio -->
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(135deg, #2c5282, #d69e2e);">
+                    Django Portfolio
+                </div>
+                <div class="project-content">
+                    <h3>Dynamic Portfolio Website</h3>
+                    <p>A full-featured Django portfolio showcasing projects, skills, and contact form with responsive design and dynamic content. Developed for CSE310 course requirements.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="{% url 'home' %}" class="btn btn-primary">View Live</a>
+                        <a href="https://github.com/chisom035" class="btn btn-secondary" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2: Kids Read for Fun -->
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(135deg, #AF1B3F, #EFC69B);">
+                    Book Blog
+                </div>
+                <div class="project-content">
+                    <h3>Kids Read for Fun</h3>
+                    <p>Responsive book review blog with filtering capabilities and accessible design for young readers. Features include age-based filtering, genre selection, and star ratings.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/chisom035/kids-read-for-fun" class="btn btn-primary" target="_blank">View Live</a>
+                        <a href="https://github.com/chisom035/kids-read-for-fun" class="btn btn-secondary" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3: Recipe Book (NEW) -->
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(135deg, #20c997, #0d6efd);">
+                    Recipe Book
+                </div>
+                <div class="project-content">
+                    <h3>Interactive Recipe Book</h3>
+                    <p>A dynamic recipe gallery with search functionality, filtering, and star ratings. Features 8+ recipes with detailed instructions, ingredients, and responsive design for all devices.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Search Algorithms</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/chisom035/wdd131/tree/main/recipes" class="btn btn-primary" target="_blank">View Live</a>
+                        <a href="https://github.com/chisom035/wdd131/tree/main/recipes" class="btn btn-secondary" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="{% url 'projects' %}" class="btn btn-primary">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hello! My name is Chisom Wonodi, I am a software engineering student at BYU-I. With my still growing experience in full-stack development, I enjoy turning complex problems into simple, beautiful designs.</p>
+                <p>Currently pursuing my degree in Software Engineering, and I'm actively working on projects like this portfolio for my CSE310 Applied Programming course, where I'm mastering Django and modern web technologies.</p>
+                <div class="about-details">
+                    <div class="detail">
+                        <strong>Location:</strong> Rexburg, Idaho
+                    </div>
+                    <div class="detail">
+                        <strong>Email:</strong> slimdavy95@gmail.com
+                    </div>
+                    <div class="detail">
+                        <strong>Education:</strong> Software Engineering, CSE310 Student
+                    </div>
+                    <div class="detail">
+                        <strong>Current Focus:</strong> Web Application Development with Django
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="about-placeholder">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>I'm always interested in new opportunities and collaborations.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <strong>Email:</strong> slimdavy95@gmail.com
+                    </div>
+                    <div class="contact-method">
+                        <strong>Phone:</strong> 2083463598
+                    </div>
+                    <div class="contact-method">
+                        <strong>Location:</strong> Rexburg, Idaho
+                    </div>
+                    <div class="contact-method">
+                        <strong>GitHub:</strong> github.com/chisom035
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm" method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                
+                {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
