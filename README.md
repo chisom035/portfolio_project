@@ -2,6 +2,9 @@
 
 This is a dynamic, full-stack portfolio website built with Django for my CSE310 Applied Programming course. This portfolio showcases some of my projects, skills, and contact information with responsive design and interactive features. It demonstrates proficiency in Django, Python, HTML, CSS, and JavaScript.
 
+# Youtube Url
+https://youtu.be/3EJcMVd2mFE
+
 ## Instructions for Build and Use
 
 Steps to build and/or run the software:
